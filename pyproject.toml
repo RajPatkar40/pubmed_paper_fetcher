@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "pubmed-paper-fetcher"
+version = "0.1.0"
+description = "Fetches PubMed papers and filters for pharma/biotech affiliations."
+authors = ["Raj Patkar"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9"
+requests = ">=2.32.3,<3.0.0"
+lxml = ">=5.3.1,<6.0.0"
+
+[tool.poetry.scripts]
+get-papers-list = "pubmed_paper_fetcher.fetch_papers:main"  # Ensure fetch_papers.py has a main() function
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
